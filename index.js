@@ -3,8 +3,11 @@ const bot = new Discord.Client()
 const config = require("./config.json")
 const funcs = require("./functions.js")
 const fs = require('fs')
+require('dotenv').config()
 const sqlite = require('better-sqlite3')
 const sql = new sqlite('./stockInfo.sqlite')
+const request = require('request')
+const yahooStockPrices = require('yahoo-stock-prices')
 
 
 bot.once('ready', ()=>{
@@ -38,5 +41,26 @@ bot.on('message', message => {
         }catch(e){funcs.displayError(e, bot)}}
     })
 
+
+setInterval(async () => {  
+    let count = 0
+    const db = sql.prepare("SELECT symbol FROM stocks")
+
+    for(const ct of db.iterate()){count++}
+    if(count < 1){console.log("Not posting, no table values"); return;}
+    else{
+        const ticker = new Discord.MessageEmbed()
+            .setColor('#00ff00')
+            .setTitle("Tickers")
+            .setTimestamp()
+
+        for(const val of db.iterate()){
+            var stock = await yahooStockPrices.getCurrentData(val.symbol)
+            ticker.addField(val.symbol, `$${stock.price}`, false)
+        }
+        bot.channels.cache.get('811835844691755032').send(ticker).then(msg => msg.delete({timeout: 15000}))
+    }
+}, 15000)
+
 exports.botCommands = bot.commands
-//bot.login()
+bot.login(process.env.TOKEN)

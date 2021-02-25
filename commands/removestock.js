@@ -32,13 +32,7 @@ module.exports = {
                 bot.channels.cache.get(message.channel.id).send(successEmbed).then(msg => msg.delete({timeout: 10000}))
             }
             catch(e){funcs.displayCustomError("Error updating the table! Check console.", bot, message.channel.id); console.log(e)}
-
-
-
-
         }
-        
-
     }
 
 

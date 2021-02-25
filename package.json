@@ -12,7 +12,9 @@
   "dependencies": {
     "better-sqlite3": "^7.1.2",
     "discord.js": "^12.5.1",
+    "dotenv": "^8.2.0",
     "fs": "0.0.1-security",
-    "request": "^2.88.2"
+    "request": "^2.88.2",
+    "yahoo-stock-prices": "^1.1.0"
   }
 }
