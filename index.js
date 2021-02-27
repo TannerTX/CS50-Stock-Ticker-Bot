@@ -69,10 +69,14 @@ bot.on('message', message => {
         try{
             let commandName = args[0].toLowerCase().substring(1)
             if(commandName){bot.commands.get(commandName).execute(message, args, bot); message.delete({timeout: 5000})}
-        }catch(e){funcs.displayError(e, bot)}}
+        }catch(e){funcs.displayCustomError("Command does not exist!\nUse /help for a list of usable commands.", bot, message.channel.id)}}
     })
 
 setInterval(async () => {  
+    let content = JSON.parse(fs.readFileSync("../config.json", 'utf8'))
+    
+    if(content.tickerStatus == "on"){
+
     let count = 0
     const db = sql.prepare("SELECT symbol FROM stocks")
 
@@ -90,6 +94,8 @@ setInterval(async () => {
         }
         bot.channels.cache.get(config.defaultChanID).send(ticker).then(msg => msg.delete({timeout: 15000}))
     }
+}
+
 }, 15000)
 
 
