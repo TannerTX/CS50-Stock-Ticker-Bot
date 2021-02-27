@@ -2,7 +2,7 @@
  
 ## TODO
 
-> A Stock Ticker Discord bot written as a final project for CS50
+> A Discord bot I made as a final project for CS50. The bot utilizes API calls to [IEXCloud](https://iexcloud.io), as well as queries to a local SQLite3 database for easy data access across multiple Discord guilds.
 
 ## Commands
 /help will give you a detailed description and usage(s) of each command. 
