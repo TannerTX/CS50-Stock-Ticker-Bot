@@ -18,9 +18,7 @@ npm install
 
 * Log into the [Discord Developer Portal](https://discord.com/developers/applications)
 * Create a new application and name it however you'd like
-* Bullet list
-              * Nested bullet
-                  * Sub-nested bullet etc
+  * H
 
 
 
