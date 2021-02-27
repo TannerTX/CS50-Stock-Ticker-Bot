@@ -33,6 +33,10 @@ npm install
 
 ## Bring the bot online
 ```javascript
+npm start
+
+OR
+
 node index.js
 
 ```
