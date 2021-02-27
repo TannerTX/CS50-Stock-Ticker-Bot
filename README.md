@@ -5,8 +5,10 @@
 > A Stock Ticker Discord bot written as a final project for CS50
 
 ## Code Samples
+```Javascript
+Test
+```
 
-> TODO
 
 ## Installation
 
