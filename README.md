@@ -10,10 +10,12 @@ Test
 ```
 
 
-## Installation
+## Dependency Installation
 ```
 npm install
 ```
+
+## Running the bot
 * Create an account at [IEXCloud](https://iexcloud.io) and obtain your API key (looks like *pk_....*)
 
 * Log into the [Discord Developer Portal](https://discord.com/developers/applications)
