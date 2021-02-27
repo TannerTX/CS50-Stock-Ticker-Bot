@@ -24,5 +24,5 @@ npm install
   * Scroll back up to the **Scopes** portion and copy the newly generated link.
   * Navigate to the **Bot** tab, add a bot, name it/change it's profile photo, then copy it's token.
 
-><ins>**DO NOT SHARE THIS TOKEN**</ins>
+>- <ins>**DO NOT SHARE THIS TOKEN**</ins>
 
