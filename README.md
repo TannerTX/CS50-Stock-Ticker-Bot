@@ -29,6 +29,6 @@ npm install
 * Paste the **OAuth2** link into your browser, and add the bot to a server you have administrator priveleges on.
 
 * Navigate to the root directory of the bot
-  * Open the **.env** file and paste your **Bot Token** and **IEXCloud API Key** in the corresponding places (No quotes).
+  * Open the **.env** file and paste your **Bot Token** and **IEXCloud API Key** in the corresponding variables (No quotes).
 
 
