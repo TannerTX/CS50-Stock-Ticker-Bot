@@ -36,7 +36,7 @@ npm install
 npm start
 
 ```
-OR
+ OR
 ```javascript
 
 node index.js
