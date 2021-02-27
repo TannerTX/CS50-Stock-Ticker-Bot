@@ -32,12 +32,12 @@ npm install
   * Open the **.env** file and paste your **Bot Token** and **IEXCloud API Key** in the corresponding variables (No quotes).
 
 ## Bring the bot online
-```javascript
+```
 npm start
 
 ```
  OR
-```javascript
+```
 
 node index.js
 
