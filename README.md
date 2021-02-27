@@ -34,12 +34,9 @@ npm install
 ## Bring the bot online
 ```
 npm start
-
 ```
  OR
 ```
-
 node index.js
-
 ```
 
