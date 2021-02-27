@@ -38,4 +38,3 @@ npm start
 node index.js
 ```
 >You can use [Heroku](https://www.heroku.com) to host the bot, but you will need to manually add the procfile and set everything up. You can find video tutorials on Youtube, or if you already know how then that's fine, too.
-
