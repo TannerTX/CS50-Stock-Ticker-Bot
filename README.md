@@ -2,7 +2,7 @@
  
 ## TODO
 
-> A Discord bot I made as a final project for CS50. The bot utilizes API calls to [IEXCloud](https://iexcloud.io), as well as queries to a local SQLite3 database for easy data access across multiple Discord guilds.
+> A Discord bot I made as a final project for CS50. This bot allows user(s) to add and remove stock symbols to and from a local database, then takes the specified symbols and generates a custom ticker that relays those stocks' prices within the general channel of the Discord guild in which the bot resides in. The bot utilizes API calls to [IEXCloud](https://iexcloud.io), as well as queries to a local SQLite3 database for easy data access across multiple Discord guilds.
 
 ## Commands
 /help will give you a detailed description and usage(s) of each command. 
