@@ -4,10 +4,8 @@
 
 > A Stock Ticker Discord bot written as a final project for CS50
 
-## Code Samples
-```Javascript
-Test
-```
+## Commands
+/help will give you a detailed description and usage(s) of each command. 
 
 
 ## Dependency Installation
