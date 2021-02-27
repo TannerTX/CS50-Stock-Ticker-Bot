@@ -35,7 +35,9 @@ npm install
 ```javascript
 npm start
 
+```
 OR
+```javascript
 
 node index.js
 
