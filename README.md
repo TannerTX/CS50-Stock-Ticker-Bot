@@ -22,9 +22,7 @@ npm install
   * Under **Scopes**, check the box named **bot** .
   * After checking the box, scroll further down and check the **Administrator** box.
   * Scroll back up to the **Scopes** portion and copy the newly generated link.
-  * Navigate to the **Bot** tab, add a bot, name it/change it's profile photo, then copy it's token.
+  * Navigate to the **Bot** tab, add a bot, name it/change it's profile photo, then copy it's token (Never share this token).
 
-```diff
-- DO NOT SHARE THIS TOKEN
-```
+
 
