@@ -11,5 +11,7 @@ Test
 
 
 ## Installation
-
-> TODO
+```
+>Install Dependencies
+npm install
+```
