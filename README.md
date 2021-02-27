@@ -1,4 +1,4 @@
-# CS50 Discord Bot
+# Discord Stock Ticker Bot (CS50 Final Project)
  
 ## Introduction
 
