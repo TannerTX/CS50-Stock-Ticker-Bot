@@ -14,7 +14,7 @@ Test
 ```
 npm install
 ```
-..*Create an account at [IEXCloud](https://iexcloud.io) and obtain your API key (looks like *pk_....*)
+*Create an account at [IEXCloud](https://iexcloud.io) and obtain your API key (looks like *pk_....*)
 
 
 
