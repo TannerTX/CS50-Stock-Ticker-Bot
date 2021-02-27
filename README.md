@@ -15,7 +15,7 @@ Test
 npm install
 ```
 
-## Running the bot
+## Bot Configuration
 * Create an account at [IEXCloud](https://iexcloud.io) and obtain your API key (looks like *pk_....*)
 
 * Log into the [Discord Developer Portal](https://discord.com/developers/applications)
@@ -30,4 +30,10 @@ npm install
 
 * Navigate to the root directory of the bot
   * Open the **.env** file and paste your **Bot Token** and **IEXCloud API Key** in the corresponding variables (No quotes).
+
+### Bring the bot online
+```javascript
+node index.js
+
+```
 
