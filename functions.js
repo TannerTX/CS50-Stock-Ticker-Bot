@@ -4,6 +4,7 @@ const request = require('request')
 const sqlite = require('better-sqlite3')
 const sql = new sqlite('./stockInfo.sqlite')
 const config = require('./config.json')
+require('dotenv').config()
 
 
 module.exports = {
@@ -16,7 +17,7 @@ module.exports = {
             .addField("READ", "Bot encountered an error.\nRefer to the console for more information.", false)
             .setTimestamp()
 
-        bot.channels.cache.get('811835844691755032').send(errorEmbed).then(msg => msg.delete({timeout: 10000}))
+        bot.channels.cache.get(config.defaultChanID).send(errorEmbed).then(msg => msg.delete({timeout: 10000}))
         console.log(err)
         return;
     },

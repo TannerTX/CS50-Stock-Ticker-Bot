@@ -4,7 +4,6 @@ const request = require('request')
 const sqlite = require('better-sqlite3')
 const sql = new sqlite('./stockInfo.sqlite')
 const funcs = require('../functions.js')
-const config = require('../config.json')
 
 
 module.exports = {
@@ -21,13 +20,15 @@ module.exports = {
 
         args[1] = args[1].toUpperCase()
         const sym = sql.prepare("SELECT symbol, stockname FROM stocks WHERE symbol=?").get(args[1])
-        if(!sym){funcs.displayCustomError(`**[${args[1]}]** does not exist in the database!`,bot, message.channel.id)}
+        console.log(`\n\n-------\nChecking table for [${args[1]}]\n[SQL]: SELECT symbol, stockname FROM stocks WHERE symbol=? with value [${args[1]}]`)
+        if(!sym){console.log(`[${args[1]}] does not exist in table!`); funcs.displayCustomError(`**[${args[1]}]** does not exist in the database!`,bot, message.channel.id)}
         else{
             const successEmbed = new Discord.MessageEmbed()
                 .setColor('#00FF00')
                 .setTitle("Success!")
             try{
                 sql.prepare("DELETE FROM stocks WHERE symbol=?").run(args[1])
+                console.log(`-------\nRemoving stock [${args[1]}] from the table\n[SQL]: DELETE FROM stocks WHERE symbol=? with value [${args[1]}]`)
                 successEmbed.addField("____", `[**${args[1]}**] was successfully removed from the database!`, false)
                 bot.channels.cache.get(message.channel.id).send(successEmbed).then(msg => msg.delete({timeout: 10000}))
             }

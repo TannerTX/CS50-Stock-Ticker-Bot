@@ -19,10 +19,12 @@ module.exports = {
 
         let count = 0
         const table = sql.prepare("SELECT symbol, stockname FROM stocks")
+        console.log("\n\n-------\nChecking if table is populated\n[SQL]: SELECT symbol, stockname FROM stocks")
         for(const ct of table.iterate()){count++}
 
-        if(count < 1){funcs.displayCustomError("Database is not populated!", bot, message.channel.id)}
+        if(count < 1){console.log(`No items in table!`); funcs.displayCustomError("Database is not populated!", bot, message.channel.id)}
         else{
+        console.log("-------\nTable is populated! Viewing current table")
         const dbEmbed = new Discord.MessageEmbed()
             .setColor('#00FF00')
             .setTimestamp()

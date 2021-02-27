@@ -2,7 +2,7 @@ const Discord = require('discord.js')
 const bot = require('../index.js')
 const funcs = require('../functions.js')
 const request = require('request')
-const config = require('../config.json')
+require('dotenv').config()
 
 
 module.exports = {
@@ -18,7 +18,7 @@ module.exports = {
         }
         
         args[1] = args[1].toUpperCase()
-        let req = `https://cloud.iexapis.com/stable/stock/${args[1]}/quote?token=${config.API_KEY}`
+        let req = `https://cloud.iexapis.com/stable/stock/${args[1]}/quote?token=${process.env.API_KEY}`
         const tickerEmbed = new Discord.MessageEmbed()
             .setColor('#34b7eb')
             .setTitle(`Quote for ${args[1]}`)
