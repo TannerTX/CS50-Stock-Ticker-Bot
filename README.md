@@ -2,7 +2,15 @@
  
 ## Description
 
-> A Discord bot I made as a final project for CS50. This bot allows user(s) to add and remove stock symbols to and from a local database, then takes the specified symbols and generates a custom ticker that relays those stocks' prices within the general channel of the Discord guild in which the bot resides in. The bot utilizes API calls to [IEXCloud](https://iexcloud.io), as well as queries to a local SQLite3 database for easy data access across multiple Discord guilds.
+> A Discord bot I made as a final project for CS50. This bot allows user(s) to add and remove stock symbols to and from a local database, then takes the specified symbols and generates a custom ticker that relays those stocks' prices within the general channel of the Discord guild in which the bot resides in.
+
+>The bot utilizes API calls to [IEXCloud](https://iexcloud.io), as well as queries to a local SQLite3 database for easy data access across multiple Discord guilds.
+>Users have access to a few commands that determine the bot's output. The command(s) /addstock and /removestock utilizes the better-sqlite3 node package, where they query the local database titled **StockInfo** and update the table titled **stocks**; adding and removing legitimate symbols from the table at the user's own will.
+
+>Users also have access to /quote, /viewdb, and /ticker. /quote will make a call to the [IEXCloud](https://iexcloud.io) stock API, getting the current or latest market value of a single stock the user specifies. /viewdb allows the user to view the current contents of the **stocks** table within the **StockInfo** database. If the table is populated, a board will be posted in the main chat with all of the symbols the user has added over time. The /ticker command allows the user to toggle a forever-updating board that contains the current market value of every stock symbol in the **stocks** table. Every 10 seconds, a board is posted in the main text channel with said values; which is then deleted and replaced by a new board containing updated stock prices.
+
+>All of these user-specified settings and stock symbols will remain persistent, even after the bot undergoes a restart- so the user will still be able
+to view all of their hand-picked stocks and maintain their ticker state at all times the bot is online
 
 ## Video Demonstration
 >https://www.youtube.com/watch?v=mde8IgWI00k
