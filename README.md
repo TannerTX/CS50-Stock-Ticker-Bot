@@ -13,7 +13,7 @@
 to view all of their hand-picked stocks and maintain their ticker state at all times the bot is online
 
 ## Video Demonstration
->https://www.youtube.com/watch?v=mde8IgWI00k
+>https://www.youtube.com/watch?v=URTc0d1Osq0
 
 >NOTE: There were some minor things I was unable to cover due to a video length limit. Not super important just FYI
 
